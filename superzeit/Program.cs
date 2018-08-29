@@ -24,7 +24,7 @@ namespace superzeit
                 //     config.Sources.Clear(); //Don't use the default AddJsonFile
                 //     config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
                 //         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: false); 
-                //         //changed to reloadOnChange to false to better support Alpine and constrined environments that don't like a lot of File Watchers
+                //         //changed to reloadOnChange to false to better support Alpine and constrained environments that don't like a lot of File Watchers
                 //         // avoids errors like:
                 //         // The configured user limit (128) on the number of inotify instances has been reached
                 // })
