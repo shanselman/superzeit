@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <CrossGenDuringPublish>false</CrossGenDuringPublish>
   </PropertyGroup>
+
+  <ItemGroup>
+    <LinkerRootAssemblies Include="Microsoft.AspNetCore.Mvc.Razor.Extensions;Microsoft.Extensions.FileProviders.Composite" />
+  </ItemGroup>
 
   <ItemGroup>
     <!-- this can be here, or can be done all at runtime in the Dockerfile -->
