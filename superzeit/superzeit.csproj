@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <LinkerRootAssemblies Include="Microsoft.AspNetCore.Mvc.Razor.Extensions;Microsoft.Extensions.FileProviders.Composite" />
-  </ItemGroup>
+    <LinkerRootAssemblies Include="Microsoft.AspNetCore.Mvc.Razor.Extensions;Microsoft.Extensions.FileProviders.Composite;Microsoft.Extensions.Primitives;Microsoft.AspNetCore.Diagnostics.Abstractions" />
+  </ItemGroup> 
 
   <ItemGroup>
     <!-- this can be here, or can be done all at runtime in the Dockerfile -->

@@ -31,27 +31,6 @@ ENV DOTNET_USE_POLLING_FILE_WATCHER=true
 WORKDIR /app
 COPY --from=publish /app/superzeit/out ./
 
-
-# EXPOSE 8080
-
-# RUN apk add --update build-base && \
-#   apk add --update go git && \
-#   mkdir -p /tmp/gotty && \
-#   GOPATH=/tmp/gotty go get github.com/yudai/gotty && \
-#   mv /tmp/gotty/bin/gotty /usr/local/bin/ && \
-#   apk del go git build-base && \
-#   rm -rf /tmp/gotty /var/cache/apk/*
-
-# ENTRYPOINT ["/usr/local/bin/gotty"]
-# CMD ["--permit-write","--reconnect","/bin/sh"]
-
-#RUN sysctl -p
+#expose a port and run it!
+EXPOSE 80
 ENTRYPOINT ["./superzeit"]
-#CMD watch -n 5 lsof | grep inotify & dotnet superzeit.dll
-#CMD ["sh", "wwwroot/start.sh"]
-#ENTRYPOINT ["dotnet","superzeit.dll"]
-
-#RUN chmod a+x ./superzeit
-#USER nobody
-#ENTRYPOINT ["./superzeit"]
-
